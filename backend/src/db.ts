@@ -1,6 +1,6 @@
 import { Pool } from 'pg';
 import dotenv from 'dotenv';
-//import bcrypt from 'bcryptjs';
+import bcrypt from 'bcryptjs';
 
 dotenv.config();
 
@@ -11,3 +11,7 @@ export const pool = new Pool({
   password: process.env.PGPASSWORD,
   port: Number(process.env.PGPORT) || 5432,
 });
+
+export async function initializeDatabase() {
+  
+};
